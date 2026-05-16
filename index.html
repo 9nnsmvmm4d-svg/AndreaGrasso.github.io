@@ -1,192 +1,717 @@
-z<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Andrea Grasso | Systems for Growth</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+z<!<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrea Grasso | System for Growth</title>
+  <meta name="description" content="I build practical systems that help people work, earn, and grow." />
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Andrea Grasso<br />
-Systems for Growth</h1>
-<p>I build practical systems for growth, opportunity, and long-term financial freedom.<br />
-From digital projects and investment strategies to education, automation, and creative problem-solving, I focus on building smarter ways to work, earn, and grow.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+  <style>
+    :root {
+      --bg: #08111a;
+      --bg-2: #0d1722;
+      --surface: rgba(255,255,255,0.06);
+      --surface-2: rgba(255,255,255,0.1);
+      --text: #f4f7fb;
+      --muted: #a9b7c8;
+      --line: rgba(255,255,255,0.12);
+      --accent: #59d0ff;
+      --accent-2: #7c5cff;
+      --accent-3: #34f5c5;
+      --max: 1200px;
+      --radius: 22px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.32);
+    }
 
-				<!-- Header -->
-					<!-- Header -->
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<header id="header">
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <a href="index.html" class="logo">Andrea Grasso</a>
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(89, 208, 255, 0.08), transparent 30%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
 
-</header>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-<!-- Nav -->
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
 
-<nav id="nav">
+    .page {
+      position: relative;
+      isolation: isolate;
+    }
 
-    <ul class="links">
+    .radiant-bg {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: -2;
+    }
 
-        <li class="active"><a href="index.html">Home</a></li>
+    .radiant-bg::before,
+    .radiant-bg::after {
+      content: "";
+      position: absolute;
+      width: 55vw;
+      height: 55vw;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.32;
+      animation: floatGlow 14s ease-in-out infinite alternate;
+    }
 
-      <!--  <li><a href="generic.html">About Me</a></li>
+    .radiant-bg::before {
+      top: -10vw;
+      left: -12vw;
+      background: radial-gradient(circle, rgba(89,208,255,0.75) 0%, rgba(89,208,255,0) 70%);
+    }
 
-        <li><a href="elements.html">Projects</a></li> -->
+    .radiant-bg::after {
+      right: -10vw;
+      top: 10vh;
+      background: radial-gradient(circle, rgba(124,92,255,0.62) 0%, rgba(124,92,255,0) 72%);
+      animation-duration: 18s;
+    }
 
-    </ul> <!--
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav> -->
+    .radiant-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.22;
+      animation: floatGlow 20s ease-in-out infinite alternate;
+    }
 
-				<!-- Main -->
-					<div id="main">
+    .orb-1 {
+      width: 34vw;
+      height: 34vw;
+      left: 18%;
+      top: 45%;
+      background: radial-gradient(circle, rgba(52,245,197,0.55) 0%, rgba(52,245,197,0) 72%);
+    }
 
-    <!-- Featured Intro -->
-    <article class="post featured">
-        <header class="major">
-            <h2>Andrea Grasso<br />
-            Systems for Growth</h2>
+    .orb-2 {
+      width: 30vw;
+      height: 30vw;
+      right: 5%;
+      bottom: 5%;
+      background: radial-gradient(circle, rgba(89,208,255,0.42) 0%, rgba(89,208,255,0) 70%);
+      animation-duration: 22s;
+    }
 
-            <p>I build practical digital systems, creative solutions, and growth-focused projects across education, media, automation, and online business.</p>
-        </header>
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(circle at center, black 35%, transparent 100%);
+      opacity: 0.35;
+    }
 
-        <a href="#" class="image main">
-            <img src="images/Creative workspace.jpeg" alt="" />
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(8, 17, 26, 0.55);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background:
+        linear-gradient(135deg, rgba(89,208,255,0.95), rgba(124,92,255,0.95));
+      box-shadow: 0 10px 30px rgba(89,208,255,0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-mark::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: 11px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0.06));
+      mix-blend-mode: screen;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 0.96rem;
+      transition: color 0.25s ease;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #08111a;
+      box-shadow: 0 10px 32px rgba(89,208,255,0.22);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.12);
+      color: var(--text);
+    }
+
+    main {
+      display: block;
+    }
+
+    section {
+      position: relative;
+      padding: 96px 0;
+    }
+
+    .hero {
+      min-height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+      padding: 72px 0 96px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-3);
+      box-shadow: 0 0 18px rgba(52,245,197,0.8);
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 6.3rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      max-width: 10ch;
+    }
+
+    .hero p {
+      margin-top: 22px;
+      font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+      color: var(--muted);
+      max-width: 58ch;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 28px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.05));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -35% auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(89,208,255,0.3), transparent 70%);
+      border-radius: 50%;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.8rem;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+      max-width: 14ch;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 62ch;
+      margin-bottom: 28px;
+      line-height: 1.75;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      padding: 26px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .panel {
+      padding: 28px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .list li {
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .list li strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .cta {
+      text-align: center;
+      padding-bottom: 120px;
+    }
+
+    .cta-box {
+      padding: 42px 28px;
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box p {
+      color: var(--muted);
+      max-width: 54ch;
+      margin: 14px auto 24px;
+      line-height: 1.75;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      color: var(--muted);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      will-change: opacity, transform;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes floatGlow {
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      50% {
+        transform: translate3d(3vw, -2vh, 0) scale(1.06);
+      }
+      100% {
+        transform: translate3d(-2vw, 3vh, 0) scale(0.96);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-inner,
+      .split,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 56px;
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      section {
+        padding: 72px 0;
+      }
+
+      .container {
+        width: min(calc(100% - 24px), var(--max));
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .stat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card,
+      .card,
+      .panel,
+      .cta-box {
+        padding: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .radiant-bg::before,
+      .radiant-bg::after,
+      .radiant-orb,
+      .reveal {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="radiant-bg" aria-hidden="true">
+      <div class="radiant-orb orb-1"></div>
+      <div class="radiant-orb orb-2"></div>
+    </div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="Andrea Grasso home">
+          <span class="brand-mark"></span>
+          <span>Andrea Grasso</span>
         </a>
 
-        <ul class="actions special">
-            <li><a href="#contact" class="button large">Get In Touch</a></li>
-        </ul>
-    </article>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#systems">Systems</a></li>
+            <li><a href="#growth">Growth</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
 
-    <!-- What I Do -->
-    <section class="posts">
+        <a class="btn btn-secondary" href="#contact">Get in touch</a>
+      </div>
+    </header>
 
-        <article>
-            <header>
-                <h2>Portfolio & Business Websites</h2>
-            </header>
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="reveal">
+            <div class="eyebrow">System for Growth</div>
+            <h1>Andrea Grasso</h1>
+            <p>
+              I build practical systems that help people work, earn, and grow.
+              Clear structure, useful strategy, and execution that actually moves.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#systems">Explore the system</a>
+              <a class="btn btn-secondary" href="#about">Read more</a>
+            </div>
+          </div>
 
-            <a href="#" class="image fit">
-                <img src="images/Education &Support.jpeg" alt="" />
-            </a>
+          <aside class="hero-card reveal">
+            <div class="stat-grid">
+              <div class="stat">
+                <strong>Work</strong>
+                <span>Practical systems for better output and focus.</span>
+              </div>
+              <div class="stat">
+                <strong>Earn</strong>
+                <span>Offers and assets designed to create value.</span>
+              </div>
+              <div class="stat">
+                <strong>Grow</strong>
+                <span>Repeatable progress built through useful habits.</span>
+              </div>
+              <div class="stat">
+                <strong>Build</strong>
+                <span>Simple actions turned into long-term momentum.</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-            <p>Creating clean and professional websites using platforms such as Wix and GitHub Pages for portfolios, small businesses, and personal brands.</p>
-        </article>
+      <section id="about">
+        <div class="container">
+          <h2 class="section-title reveal">A practical way to move forward</h2>
+          <p class="section-intro reveal">
+            This approach is built around clarity, leverage, and consistency.
+            The goal is not complexity. It is building systems that keep working after motivation fades.
+          </p>
 
-        <article>
-            <header>
-                <h2>Crypto Automation & Investing</h2>
-            </header>
+          <div class="cards">
+            <article class="card reveal">
+              <h3>Clarity first</h3>
+              <p>Define the goal, remove noise, and focus only on actions that create useful movement.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Simple systems</h3>
+              <p>Create repeatable workflows for content, work, offers, and habits so progress becomes easier to maintain.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Compounding growth</h3>
+              <p>Small actions build over time when they are tied to structure instead of mood.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-            <a href="#" class="image fit">
-                <img src="images/pic03.jpg" alt="" />
-            </a>
+      <section id="systems">
+        <div class="container split">
+          <div class="reveal">
+            <h2 class="section-title">Systems that support real progress</h2>
+            <p class="section-intro">
+              Good systems remove friction. They help you make decisions faster, stay consistent, and free up energy for better work.
+            </p>
+          </div>
 
-            <p>Building structured investment systems using ETFs, dividend strategies, crypto automation, auto-invest systems, and grid bots.</p>
-        </article>
+          <div class="panel reveal">
+            <ul class="list">
+              <li>
+                <strong>Work system</strong>
+                Build a reliable workflow for planning, producing, and finishing important work.
+              </li>
+              <li>
+                <strong>Income system</strong>
+                Turn skills and ideas into useful offers, products, or services with a clear path to value.
+              </li>
+              <li>
+                <strong>Growth system</strong>
+                Use routines, review cycles, and feedback loops to improve over time without burning out.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <article>
-            <header>
-                <h2>Digital Media & Design</h2>
-            </header>
+      <section id="growth">
+        <div class="container split">
+          <div class="panel reveal">
+            <ul class="list">
+              <li>
+                <strong>Step 1</strong>
+                Simplify the message so people understand what you do in seconds.
+              </li>
+              <li>
+                <strong>Step 2</strong>
+                Create a structure that supports output and reduces wasted motion.
+              </li>
+              <li>
+                <strong>Step 3</strong>
+                Improve through repetition, measurement, and steady refinement.
+              </li>
+            </ul>
+          </div>
 
-            <a href="#" class="image fit">
-                <img src="images/Web&Digital.jpeg" alt="" />
-            </a>
+          <div class="reveal">
+            <h2 class="section-title">Work, earn, grow</h2>
+            <p class="section-intro">
+              The strongest results usually come from systems that are clear enough to follow and flexible enough to improve.
+              That is where momentum starts.
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <p>Experience in multimedia design, motion graphics, Adobe Creative Suite, visual communication, and creative digital projects.</p>
-        </article>
+      <section id="contact" class="cta">
+        <div class="container">
+          <div class="cta-box reveal">
+            <h2 class="section-title" style="max-width:none; margin:0 auto 10px;">Build something that keeps working</h2>
+            <p>
+              Use the site to present a clear message, guide people through your process, and turn attention into action.
+            </p>
+            <a class="btn btn-primary" href="mailto:hello@andreagrasso.co.uk">Contact Andrea</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-        <article>
-            <header>
-                <h2>Education & Support Work</h2>
-            </header>
+    <footer>
+      <div class="container">
+        <p>© Andrea Grasso — System for Growth</p>
+      </div>
+    </footer>
+  </div>
 
-            <a href="#" class="image fit">
-                <img src="Investing&Growth.jpeg" alt="" />
-            </a>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
 
-            <p>Background in education, ICT support, tutoring, and supporting adults with learning disabilities through practical and structured approaches.</p>
-        </article>
-
-    </section>
-
-    <!-- About Me -->
-    <section class="post">
-        <header class="major">
-            <h2>About Me</h2>
-        </header>
-
-        <p>I have a background in digital art, education, ICT, and multimedia design, with experience across teaching, creative production, and support work.</p>
-
-        <p>Today, I focus on combining creativity, technology, and practical systems to build smarter opportunities, digital solutions, and long-term growth.</p>
-
-        <p>My work combines creativity, systems thinking, and real-world execution.</p>
-
-    </section>
-
-    <!-- Current Projects -->
-    <section class="post">
-        <header class="major">
-            <h2>Current Projects</h2>
-        </header>
-
-        <ul>
-            <li>Portfolio and business website development</li>
-            <li>Passive income systems and automation</li>
-            <li>Investment portfolio strategy research</li>
-            <li>Crypto automation and grid bot systems</li>
-            <li>Digital systems for growth and efficiency</li>
-        </ul>
-
-    </section>
-
-    <!-- Contact -->
-    <section class="post" id="contact">
-        <header class="major">
-            <h2>Let's Connect</h2>
-        </header>
-
-        <p>I’m open to opportunities, collaborations, digital projects, and creative problem-solving.</p>
-
-        <p>
-            Email: your@email.com<br />
-            GitHub: yourgithubusername<br />
-            LinkedIn: yourlinkedin
-        </p>
-
-    </section>
-
-</div>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
-	</body>
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
 </html>
