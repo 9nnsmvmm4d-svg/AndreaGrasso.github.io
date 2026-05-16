@@ -1,30 +1,39 @@
-z<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andrea Grasso | System for Growth</title>
-  <meta name="description" content="I build practical systems that help people work, earn, and grow." />
+  <meta
+    name="description"
+    content="Andrea Grasso builds premium, practical systems for growth through websites, Wix support, digital tools, and thoughtful online projects."
+  />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     :root {
-      --bg: #08111a;
-      --bg-2: #0d1722;
-      --surface: rgba(255,255,255,0.06);
-      --surface-2: rgba(255,255,255,0.1);
-      --text: #f4f7fb;
-      --muted: #a9b7c8;
+      --bg: #071018;
+      --bg-2: #0d1823;
+      --surface: rgba(255,255,255,0.05);
+      --surface-2: rgba(255,255,255,0.09);
+      --text: #f6f4ef;
+      --muted: #b3bcc8;
       --line: rgba(255,255,255,0.12);
-      --accent: #59d0ff;
-      --accent-2: #7c5cff;
-      --accent-3: #34f5c5;
+      --accent: #7ee0ff;
+      --accent-2: #8b7cff;
+      --accent-3: #63f0d0;
+      --gold: #e6c78b;
       --max: 1200px;
-      --radius: 22px;
-      --shadow: 0 20px 60px rgba(0,0,0,0.32);
+      --radius: 24px;
+      --shadow: 0 24px 70px rgba(0,0,0,0.34);
+      --font-body: 'Inter', sans-serif;
+      --font-display: 'Cormorant Garamond', serif;
     }
 
     * {
@@ -38,9 +47,9 @@ z<!<!DOCTYPE html>
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-body);
       background:
-        radial-gradient(circle at top, rgba(89, 208, 255, 0.08), transparent 30%),
+        radial-gradient(circle at top, rgba(126, 224, 255, 0.08), transparent 28%),
         linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
       color: var(--text);
       overflow-x: hidden;
@@ -48,8 +57,13 @@ z<!<!DOCTYPE html>
     }
 
     a {
-      color: inherit;
+      color: var(--accent);
       text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    a:hover {
+      color: #b7eeff;
     }
 
     img, svg {
@@ -77,29 +91,29 @@ z<!<!DOCTYPE html>
       width: 55vw;
       height: 55vw;
       border-radius: 50%;
-      filter: blur(70px);
-      opacity: 0.32;
+      filter: blur(72px);
+      opacity: 0.3;
       animation: floatGlow 14s ease-in-out infinite alternate;
     }
 
     .radiant-bg::before {
       top: -10vw;
       left: -12vw;
-      background: radial-gradient(circle, rgba(89,208,255,0.75) 0%, rgba(89,208,255,0) 70%);
+      background: radial-gradient(circle, rgba(126,224,255,0.72) 0%, rgba(126,224,255,0) 70%);
     }
 
     .radiant-bg::after {
       right: -10vw;
       top: 10vh;
-      background: radial-gradient(circle, rgba(124,92,255,0.62) 0%, rgba(124,92,255,0) 72%);
+      background: radial-gradient(circle, rgba(139,124,255,0.56) 0%, rgba(139,124,255,0) 72%);
       animation-duration: 18s;
     }
 
     .radiant-orb {
       position: absolute;
       border-radius: 50%;
-      filter: blur(90px);
-      opacity: 0.22;
+      filter: blur(92px);
+      opacity: 0.2;
       animation: floatGlow 20s ease-in-out infinite alternate;
     }
 
@@ -108,7 +122,7 @@ z<!<!DOCTYPE html>
       height: 34vw;
       left: 18%;
       top: 45%;
-      background: radial-gradient(circle, rgba(52,245,197,0.55) 0%, rgba(52,245,197,0) 72%);
+      background: radial-gradient(circle, rgba(99,240,208,0.5) 0%, rgba(99,240,208,0) 72%);
     }
 
     .orb-2 {
@@ -116,7 +130,7 @@ z<!<!DOCTYPE html>
       height: 30vw;
       right: 5%;
       bottom: 5%;
-      background: radial-gradient(circle, rgba(89,208,255,0.42) 0%, rgba(89,208,255,0) 70%);
+      background: radial-gradient(circle, rgba(126,224,255,0.34) 0%, rgba(126,224,255,0) 70%);
       animation-duration: 22s;
     }
 
@@ -126,11 +140,11 @@ z<!<!DOCTYPE html>
       z-index: -1;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
       background-size: 48px 48px;
       mask-image: radial-gradient(circle at center, black 35%, transparent 100%);
-      opacity: 0.35;
+      opacity: 0.32;
     }
 
     .container {
@@ -142,8 +156,8 @@ z<!<!DOCTYPE html>
       position: sticky;
       top: 0;
       z-index: 30;
-      backdrop-filter: blur(14px);
-      background: rgba(8, 17, 26, 0.55);
+      backdrop-filter: blur(16px);
+      background: rgba(7, 16, 24, 0.58);
       border-bottom: 1px solid var(--line);
     }
 
@@ -161,15 +175,19 @@ z<!<!DOCTYPE html>
       gap: 12px;
       font-weight: 700;
       letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .brand:hover {
+      color: var(--text);
     }
 
     .brand-mark {
       width: 40px;
       height: 40px;
       border-radius: 12px;
-      background:
-        linear-gradient(135deg, rgba(89,208,255,0.95), rgba(124,92,255,0.95));
-      box-shadow: 0 10px 30px rgba(89,208,255,0.25);
+      background: linear-gradient(135deg, rgba(126,224,255,0.95), rgba(139,124,255,0.92));
+      box-shadow: 0 10px 30px rgba(126,224,255,0.22);
       position: relative;
       overflow: hidden;
     }
@@ -179,7 +197,7 @@ z<!<!DOCTYPE html>
       position: absolute;
       inset: 1px;
       border-radius: 11px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0.06));
+      background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,255,255,0.05));
       mix-blend-mode: screen;
     }
 
@@ -194,7 +212,6 @@ z<!<!DOCTYPE html>
     nav a {
       color: var(--muted);
       font-size: 0.96rem;
-      transition: color 0.25s ease;
     }
 
     nav a:hover {
@@ -210,7 +227,7 @@ z<!<!DOCTYPE html>
       border-radius: 999px;
       border: 1px solid transparent;
       font-weight: 600;
-      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
     }
 
     .btn:hover {
@@ -218,9 +235,13 @@ z<!<!DOCTYPE html>
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #08111a;
-      box-shadow: 0 10px 32px rgba(89,208,255,0.22);
+      background: linear-gradient(135deg, var(--gold), #fff0c7);
+      color: #0a1018;
+      box-shadow: 0 10px 32px rgba(230,199,139,0.2);
+    }
+
+    .btn-primary:hover {
+      color: #0a1018;
     }
 
     .btn-secondary {
@@ -229,26 +250,26 @@ z<!<!DOCTYPE html>
       color: var(--text);
     }
 
-    main {
-      display: block;
+    .btn-secondary:hover {
+      color: var(--text);
     }
 
     section {
       position: relative;
-      padding: 96px 0;
+      padding: 104px 0;
     }
 
     .hero {
       min-height: calc(100vh - 76px);
       display: flex;
       align-items: center;
-      padding: 72px 0 96px;
+      padding: 78px 0 104px;
     }
 
     .hero-inner {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 36px;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 38px;
       align-items: center;
     }
 
@@ -258,35 +279,44 @@ z<!<!DOCTYPE html>
       gap: 10px;
       padding: 8px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
       color: var(--muted);
       font-size: 0.92rem;
       margin-bottom: 22px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .eyebrow::before {
       content: "";
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
-      background: var(--accent-3);
-      box-shadow: 0 0 18px rgba(52,245,197,0.8);
+      background: var(--gold);
+      box-shadow: 0 0 18px rgba(230,199,139,0.7);
+    }
+
+    h1,
+    .section-title,
+    .cta-box h2 {
+      font-family: var(--font-display);
+      font-weight: 600;
     }
 
     h1 {
-      font-size: clamp(2.8rem, 7vw, 6.3rem);
-      line-height: 0.95;
-      letter-spacing: -0.05em;
+      font-size: clamp(3.2rem, 7vw, 6.7rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
       max-width: 10ch;
     }
 
     .hero p {
       margin-top: 22px;
-      font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+      font-size: clamp(1.05rem, 1.8vw, 1.24rem);
       color: var(--muted);
-      max-width: 58ch;
-      line-height: 1.75;
+      max-width: 60ch;
+      line-height: 1.85;
     }
 
     .hero-actions {
@@ -298,10 +328,10 @@ z<!<!DOCTYPE html>
 
     .hero-card {
       position: relative;
-      padding: 28px;
+      padding: 30px;
       border-radius: var(--radius);
       background: linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.05));
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.1);
       box-shadow: var(--shadow);
       overflow: hidden;
     }
@@ -312,7 +342,7 @@ z<!<!DOCTYPE html>
       inset: auto -10% -35% auto;
       width: 220px;
       height: 220px;
-      background: radial-gradient(circle, rgba(89,208,255,0.3), transparent 70%);
+      background: radial-gradient(circle, rgba(230,199,139,0.22), transparent 70%);
       border-radius: 50%;
     }
 
@@ -325,35 +355,38 @@ z<!<!DOCTYPE html>
     .stat {
       padding: 18px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.045);
       border: 1px solid rgba(255,255,255,0.08);
     }
 
     .stat strong {
       display: block;
-      font-size: 1.8rem;
-      line-height: 1;
+      font-size: 1.14rem;
+      line-height: 1.3;
       margin-bottom: 8px;
+      color: var(--text);
     }
 
     .stat span {
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
+      line-height: 1.65;
+      display: block;
     }
 
     .section-title {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
       margin-bottom: 18px;
       max-width: 14ch;
     }
 
     .section-intro {
       color: var(--muted);
-      max-width: 62ch;
+      max-width: 64ch;
       margin-bottom: 28px;
-      line-height: 1.75;
+      line-height: 1.85;
     }
 
     .cards {
@@ -363,22 +396,28 @@ z<!<!DOCTYPE html>
     }
 
     .card {
-      padding: 26px;
+      padding: 28px;
       border-radius: var(--radius);
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.09);
       box-shadow: var(--shadow);
     }
 
     .card h3 {
-      font-size: 1.2rem;
+      font-size: 1.24rem;
       margin-bottom: 12px;
       letter-spacing: -0.02em;
+      color: var(--text);
     }
 
     .card p {
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
     }
 
     .split {
@@ -389,10 +428,10 @@ z<!<!DOCTYPE html>
     }
 
     .panel {
-      padding: 28px;
+      padding: 30px;
       border-radius: var(--radius);
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.09);
     }
 
     .list {
@@ -402,39 +441,48 @@ z<!<!DOCTYPE html>
     }
 
     .list li {
-      padding: 16px 18px;
+      padding: 18px 18px;
       border-radius: 16px;
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.038);
       border: 1px solid rgba(255,255,255,0.08);
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
     .list li strong {
       color: var(--text);
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
     .cta {
       text-align: center;
-      padding-bottom: 120px;
+      padding-bottom: 124px;
     }
 
     .cta-box {
-      padding: 42px 28px;
-      border-radius: 28px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+      padding: 46px 30px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
       box-shadow: var(--shadow);
     }
 
     .cta-box p {
       color: var(--muted);
-      max-width: 54ch;
+      max-width: 56ch;
       margin: 14px auto 24px;
-      line-height: 1.75;
+      line-height: 1.85;
     }
 
     footer {
@@ -486,7 +534,7 @@ z<!<!DOCTYPE html>
 
     @media (max-width: 640px) {
       section {
-        padding: 72px 0;
+        padding: 76px 0;
       }
 
       .container {
@@ -549,8 +597,9 @@ z<!<!DOCTYPE html>
         <nav aria-label="Primary">
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#systems">Systems</a></li>
-            <li><a href="#growth">Growth</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#growth">Approach</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -564,34 +613,35 @@ z<!<!DOCTYPE html>
         <div class="container hero-inner">
           <div class="reveal">
             <div class="eyebrow">System for Growth</div>
-            <h1>Andrea Grasso</h1>
+            <h1>Designing practical systems with a more thoughtful edge.</h1>
             <p>
-              I build practical systems that help people work, earn, and grow.
-              Clear structure, useful strategy, and execution that actually moves.
+              I build digital projects, refined websites, and structured systems for growth.
+              My work blends creativity, clear thinking, and practical execution to shape ideas
+              into assets that feel considered, useful, and built to last.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#systems">Explore the system</a>
-              <a class="btn btn-secondary" href="#about">Read more</a>
+              <a class="btn btn-primary" href="#projects">Explore selected work</a>
+              <a class="btn btn-secondary" href="#contact">Start a conversation</a>
             </div>
           </div>
 
           <aside class="hero-card reveal">
             <div class="stat-grid">
               <div class="stat">
-                <strong>Work</strong>
-                <span>Practical systems for better output and focus.</span>
+                <strong>Website creation</strong>
+                <span>Elegant, practical websites for personal brands, portfolio-led businesses, and independent projects.</span>
               </div>
               <div class="stat">
-                <strong>Earn</strong>
-                <span>Offers and assets designed to create value.</span>
+                <strong>Wix support</strong>
+                <span>Thoughtful help shaping layout, structure, navigation, and visual clarity within Wix.</span>
               </div>
               <div class="stat">
-                <strong>Grow</strong>
-                <span>Repeatable progress built through useful habits.</span>
+                <strong>Digital tools</strong>
+                <span>Useful browser-based projects, calculators, and interactive ideas with a functional core.</span>
               </div>
               <div class="stat">
-                <strong>Build</strong>
-                <span>Simple actions turned into long-term momentum.</span>
+                <strong>Growth systems</strong>
+                <span>Structured thinking around momentum, opportunity, and long-term digital value.</span>
               </div>
             </div>
           </aside>
@@ -600,53 +650,128 @@ z<!<!DOCTYPE html>
 
       <section id="about">
         <div class="container">
-          <h2 class="section-title reveal">A practical way to move forward</h2>
+          <h2 class="section-title reveal">A practice built around clarity, usefulness, and growth.</h2>
           <p class="section-intro reveal">
-            This approach is built around clarity, leverage, and consistency.
-            The goal is not complexity. It is building systems that keep working after motivation fades.
+            My work sits between creative direction, digital problem-solving, and systems thinking.
+            I’m interested in building things that feel clean and intentional on the surface,
+            but are also practical underneath, whether that means a website, an online tool,
+            or a project designed to create long-term value.
           </p>
 
           <div class="cards">
             <article class="card reveal">
-              <h3>Clarity first</h3>
-              <p>Define the goal, remove noise, and focus only on actions that create useful movement.</p>
+              <h3>Refined website work</h3>
+              <p>
+                I create websites that feel clear, polished, and purposeful, helping individuals
+                and small brands present themselves with more confidence and structure.
+              </p>
+              <p><a href="#services">View services</a></p>
             </article>
+
             <article class="card reveal">
-              <h3>Simple systems</h3>
-              <p>Create repeatable workflows for content, work, offers, and habits so progress becomes easier to maintain.</p>
+              <h3>Creative digital projects</h3>
+              <p>
+                Alongside client-facing work, I build my own digital experiments and practical tools,
+                exploring how useful ideas can become elegant online assets.
+              </p>
+              <p><a href="#projects">See projects</a></p>
             </article>
+
             <article class="card reveal">
-              <h3>Compounding growth</h3>
-              <p>Small actions build over time when they are tied to structure instead of mood.</p>
+              <h3>Systems for momentum</h3>
+              <p>
+                I’m drawn to structures that support steady progress, from workflow and digital income ideas
+                to tools that can continue creating value over time.
+              </p>
+              <p><a href="#growth">Read approach</a></p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="systems">
-        <div class="container split">
-          <div class="reveal">
-            <h2 class="section-title">Systems that support real progress</h2>
-            <p class="section-intro">
-              Good systems remove friction. They help you make decisions faster, stay consistent, and free up energy for better work.
-            </p>
-          </div>
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title reveal">Services with structure and taste.</h2>
+          <p class="section-intro reveal">
+            I help shape digital work so it feels more coherent, more useful, and more aligned with its purpose,
+            whether that means building a new website, refining an existing one, or improving how ideas are presented online.
+          </p>
 
-          <div class="panel reveal">
-            <ul class="list">
-              <li>
-                <strong>Work system</strong>
-                Build a reliable workflow for planning, producing, and finishing important work.
-              </li>
-              <li>
-                <strong>Income system</strong>
-                Turn skills and ideas into useful offers, products, or services with a clear path to value.
-              </li>
-              <li>
-                <strong>Growth system</strong>
-                Use routines, review cycles, and feedback loops to improve over time without burning out.
-              </li>
-            </ul>
+          <div class="cards">
+            <article class="card reveal">
+              <h3>Wix website support</h3>
+              <p>
+                I provide support in building and improving Wix websites, helping with layout, page structure,
+                section flow, styling, and the overall feel of the site so it becomes clearer, more premium,
+                and easier for visitors to navigate.
+              </p>
+              <p><a href="#contact">Enquire about Wix support</a></p>
+            </article>
+
+            <article class="card reveal">
+              <h3>Website structure and refinement</h3>
+              <p>
+                Sometimes a website does not need rebuilding, it needs clarity. I help refine messaging,
+                improve visual rhythm, organise content, and create a stronger sense of direction across the page.
+              </p>
+              <p><a href="#contact">Discuss your website</a></p>
+            </article>
+
+            <article class="card reveal">
+              <h3>Digital tools and concepts</h3>
+              <p>
+                I also build digital projects with a practical edge, from utility-driven tools to more experimental
+                browser experiences that combine interaction, design, and usefulness.
+              </p>
+              <p><a href="#projects">Explore projects</a></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h2 class="section-title reveal">Selected projects and experiments.</h2>
+          <p class="section-intro reveal">
+            These projects reflect the wider shape of my work: practical, exploratory,
+            and focused on building digital assets that are both functional and thoughtfully made.
+          </p>
+
+          <div class="cards">
+            <article class="card reveal">
+              <h3>Utility Calculator Hub</h3>
+              <p>
+                A live browser-based calculator project created as a useful digital tool
+                and a long-term online asset, with a focus on clarity, simplicity, and utility.
+              </p>
+              <p>
+                <a href="https://utilitycalchub.com" target="_blank" rel="noopener noreferrer">
+                  Visit Utility Calculator Hub
+                </a>
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <h3>Interactive grass application</h3>
+              <p>
+                A mobile interactive piece in which digital grass responds to movement,
+                created as an exploration of browser interaction, visual sensitivity, and responsive motion.
+              </p>
+              <p>
+                <a href="YOUR-GRASS-APP-LINK-HERE" target="_blank" rel="noopener noreferrer">
+                  Open the interactive app
+                </a>
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <h3>Side Hustle Tracker</h3>
+              <p>
+                A project currently in development to help organise ideas, projects, tasks,
+                and progress across multiple side hustles within one structured space.
+              </p>
+              <p><span class="coming-soon">Coming soon</span></p>
+            </article>
           </div>
         </div>
       </section>
@@ -656,25 +781,30 @@ z<!<!DOCTYPE html>
           <div class="panel reveal">
             <ul class="list">
               <li>
-                <strong>Step 1</strong>
-                Simplify the message so people understand what you do in seconds.
+                <strong>Build with intent</strong>
+                Start with clarity, shape the idea carefully, and give each project a clear reason to exist.
               </li>
               <li>
-                <strong>Step 2</strong>
-                Create a structure that supports output and reduces wasted motion.
+                <strong>Refine what matters</strong>
+                Improve the structure, tone, and experience until the work feels easier to use and stronger in character.
               </li>
               <li>
-                <strong>Step 3</strong>
-                Improve through repetition, measurement, and steady refinement.
+                <strong>Create lasting value</strong>
+                Focus on websites, tools, and systems that keep working beyond the first moment of launch.
               </li>
             </ul>
           </div>
 
           <div class="reveal">
-            <h2 class="section-title">Work, earn, grow</h2>
+            <h2 class="section-title">A more thoughtful approach to growth.</h2>
             <p class="section-intro">
-              The strongest results usually come from systems that are clear enough to follow and flexible enough to improve.
-              That is where momentum starts.
+              I’m interested in growth that feels grounded rather than noisy.
+              That means combining creative judgement with practical systems, building things that not only look better,
+              but function better, communicate better, and hold their value over time.
+            </p>
+            <p class="section-intro">
+              Whether I’m supporting a Wix website, shaping a digital tool, or developing a project of my own,
+              the aim is the same: create work with clarity, usefulness, and staying power.
             </p>
           </div>
         </div>
@@ -683,11 +813,19 @@ z<!<!DOCTYPE html>
       <section id="contact" class="cta">
         <div class="container">
           <div class="cta-box reveal">
-            <h2 class="section-title" style="max-width:none; margin:0 auto 10px;">Build something that keeps working</h2>
+            <h2 class="section-title" style="max-width:none; margin:0 auto 10px;">
+              Open to collaborations, website work, and thoughtful digital projects.
+            </h2>
             <p>
-              Use the site to present a clear message, guide people through your process, and turn attention into action.
+              If you’re building a website, refining a Wix project, or exploring a digital idea that needs
+              clearer structure and better presentation, I’d be glad to hear from you.
             </p>
-            <a class="btn btn-primary" href="mailto:hello@andreagrasso.co.uk">Contact Andrea</a>
+
+            <div class="hero-actions" style="justify-content:center;">
+              <a class="btn btn-primary" href="mailto:hello@andreagrasso.co.uk">Email me</a>
+              <a class="btn btn-secondary" href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/YOURUSERNAME/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
           </div>
         </div>
       </section>
