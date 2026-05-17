@@ -204,7 +204,7 @@
       height: 100%;
     }
 
-    nav ul {
+    .desktop-nav ul {
       list-style: none;
       display: flex;
       align-items: center;
@@ -212,13 +212,19 @@
       flex-wrap: wrap;
     }
 
-    nav a {
+    .desktop-nav a {
       color: var(--muted);
       font-size: 0.96rem;
     }
 
-    nav a:hover {
+    .desktop-nav a:hover {
       color: var(--text);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .btn {
@@ -255,6 +261,74 @@
 
     .btn-secondary:hover {
       color: var(--text);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      color: var(--text);
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .menu-toggle.is-open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.is-open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.is-open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 0 16px 16px;
+    }
+
+    .mobile-menu nav {
+      display: grid;
+      gap: 8px;
+      padding: 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(7,16,24,0.92);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 14px;
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .mobile-menu a:hover {
+      background: rgba(255,255,255,0.06);
+    }
+
+    .mobile-menu.is-open {
+      display: block;
     }
 
     section {
@@ -530,8 +604,19 @@
         padding-top: 56px;
       }
 
-      nav ul {
+      .desktop-nav,
+      .desktop-cta {
         display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+    }
+
+    @media (min-width: 981px) {
+      .mobile-menu {
+        display: none !important;
       }
     }
 
@@ -604,7 +689,7 @@
           <span>Andrea Grasso</span>
         </a>
 
-        <nav aria-label="Primary">
+        <nav class="desktop-nav" aria-label="Primary">
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
@@ -614,7 +699,31 @@
           </ul>
         </nav>
 
-        <a class="btn btn-secondary" href="#contact">Get in touch</a>
+        <div class="nav-actions">
+          <a class="btn btn-secondary desktop-cta" href="#contact">Get in touch</a>
+
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <nav aria-label="Mobile navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#growth">Approach</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
     </header>
 
@@ -831,9 +940,9 @@
             </p>
 
             <div class="hero-actions" style="justify-content:center;">
-              <a class="btn btn-primary" href="mailto:andreagrasso.sfg@gmail.com">Email me</a>
+              <a class="btn btn-primary" href="mailto:hello@andreagrasso.co.uk">Email me</a>
               <a class="btn btn-secondary" href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a class="btn btn-secondary" href="https://www.linkedin.com/in/andrea-grasso-22a4692?trk=contact-info" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/YOURUSERNAME/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
           </div>
         </div>
@@ -859,6 +968,44 @@
     });
 
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const mobileLinks = document.querySelectorAll('#mobile-menu a');
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+        menuToggle.classList.toggle('is-open', !isOpen);
+        mobileMenu.classList.toggle('is-open', !isOpen);
+        mobileMenu.hidden = isOpen;
+        menuToggle.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.classList.remove('is-open');
+          mobileMenu.classList.remove('is-open');
+          mobileMenu.hidden = true;
+          menuToggle.setAttribute('aria-label', 'Open menu');
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        const clickedInside = event.target.closest('header');
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+
+        if (!clickedInside && isExpanded) {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.classList.remove('is-open');
+          mobileMenu.classList.remove('is-open');
+          mobileMenu.hidden = true;
+          menuToggle.setAttribute('aria-label', 'Open menu');
+        }
+      });
+    }
   </script>
 </body>
 </html>
