@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy | Andrea Grasso</title>
+  <meta name="description" content="Cookie Policy for Andrea Grasso." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#071018; --bg-2:#0d1823; --text:#f6f4ef; --muted:#b3bcc8; --line:rgba(255,255,255,0.12);
+      --accent:#7ee0ff; --gold:#e6c78b; --radius:24px; --shadow:0 24px 70px rgba(0,0,0,0.34);
+      --font-body:'Inter',sans-serif; --font-display:'Cormorant Garamond',serif; --max:880px;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body {
+      font-family:var(--font-body); color:var(--text); min-height:100vh;
+      background:radial-gradient(circle at top, rgba(126,224,255,.08), transparent 28%), linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);
+      line-height:1.8;
+    }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { color:#b7eeff; }
+    .container { width:min(calc(100% - 32px), var(--max)); margin:0 auto; }
+    header, footer { border-bottom:1px solid var(--line); }
+    header { padding:24px 0; }
+    footer { border-top:1px solid var(--line); border-bottom:none; padding:24px 0 40px; color:var(--muted); margin-top:48px; }
+    .brand { display:flex; align-items:center; gap:12px; color:var(--text); font-weight:700; }
+    .brand-mark {
+      width:42px; height:42px; display:grid; place-items:center; border-radius:14px;
+      background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); color:var(--gold);
+    }
+    .brand-mark svg { width:100%; height:100%; }
+    main { padding:56px 0 72px; }
+    h1, h2 { font-family:var(--font-display); font-weight:600; line-height:1; }
+    h1 { font-size:clamp(2.8rem, 8vw, 4.8rem); margin-bottom:18px; }
+    h2 { font-size:clamp(1.8rem, 4vw, 2.5rem); margin:34px 0 14px; }
+    p, li { color:var(--muted); }
+    p { margin-bottom:16px; }
+    ul { padding-left:20px; margin-bottom:16px; }
+    .legal-card {
+      padding:32px; border-radius:24px; background:rgba(255,255,255,0.045);
+      border:1px solid rgba(255,255,255,0.09); box-shadow:var(--shadow);
+    }
+    .intro { font-size:1.05rem; max-width:60ch; }
+    .footer-links { display:flex; gap:16px; flex-wrap:wrap; margin-top:10px; }
+    .footer-links a { color:var(--muted); }
+    .footer-links a:hover { color:var(--text); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="brand" href="/index.html" aria-label="Andrea Grasso home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="62" height="62" rx="18" stroke="rgba(255,255,255,0.16)" />
+            <path d="M18 44L30 18L42 44" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23 34H37" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+            <path d="M47 25C44 21 39 20 35 23C31 26 31 33 35 36C39 39 44 38 47 34" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>Andrea Grasso</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="legal-card">
+        <h1>Cookie Policy</h1>
+        <p class="intro">This Cookie Policy explains how this website may use cookies and similar technologies, what they are for, and how you can manage your preferences.</p>
+
+        <h2>What cookies are</h2>
+        <p>Cookies are small text files stored on your device when you visit a website. They can help a website function correctly, remember preferences, and provide information about how the site is used.</p>
+
+        <h2>Why cookies may be used</h2>
+        <p>This website may use cookies or similar technologies for purposes such as:</p>
+        <ul>
+          <li>Essential site functionality.</li>
+          <li>Remembering settings or user preferences.</li>
+          <li>Understanding how visitors use the site.</li>
+          <li>Improving performance and user experience.</li>
+        </ul>
+
+        <h2>Types of cookies that may be used</h2>
+        <ul>
+          <li><strong>Strictly necessary cookies:</strong> Needed for core site functions.</li>
+          <li><strong>Analytics cookies:</strong> Used to understand website traffic and usage patterns.</li>
+          <li><strong>Preference cookies:</strong> Used to remember settings where relevant.</li>
+          <li><strong>Third-party cookies:</strong> May be set by embedded services or external tools if they are added to the site.</li>
+        </ul>
+
+        <h2>Consent</h2>
+        <p>ICO guidance says cookie information should be clearly available and that non-essential cookies should not simply be hidden inside a privacy policy. It also says cookie information should be easy to find and understand. [web:154][web:168]</p>
+        <p>If non-essential cookies such as analytics, marketing, or embedded third-party tracking are used, a cookie banner or consent tool should be implemented so visitors can choose whether to accept them. UK-focused compliance guidance also recommends allowing people to change or withdraw consent later. [web:171][web:170]</p>
+
+        <h2>Managing cookies</h2>
+        <p>You can usually control cookies through your browser settings, including deleting existing cookies or blocking future ones. If a cookie banner is added to this website, you may also be able to manage preferences there.</p>
+
+        <h2>Third-party services</h2>
+        <p>If this website uses external services such as analytics, embedded media, social media content, or forms, those providers may set their own cookies subject to their own policies.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>This Cookie Policy may be updated if the website changes or if new tools and technologies are introduced.</p>
+
+        <h2>Last updated</h2>
+        <p>17 May 2026</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© Andrea Grasso — System for Growth</p>
+      <div class="footer-links">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/cookie-policy.html">Cookies</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/accessibility.html">Accessibility</a>
+        <a href="/index.html">Home</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
